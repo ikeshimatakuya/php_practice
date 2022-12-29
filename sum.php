@@ -1,5 +1,4 @@
 <?php
-
 /*
 「25行まで講義内容」
 
@@ -34,7 +33,6 @@ echo "\n";
 
 // 2.$a と $b を仮引数に持ち、　$a と $b　を足した結果を返す関数を作成してください。参考）引数は下記のように指定すると、複数の仮引数を使うことができます
 function add($a, $b){
-    $c;
     $c = $a + $b;
     return $c;
 }
@@ -55,16 +53,25 @@ echo "\n";
 
 // 4.【応用】　下記のプログラムは、配列の中で1番大きい値を返す max_array という関数を実装しようとしています。途中の部分を完成させてください
 
-function max_array($arr){
+function max_array($arr_2){
   // とりあえず配列の最初の要素を一番大きい値とする
-  //$max_number = $arr[0];
+  $max_number = $arr_2[0];
   
-  foreach($arr as $a){
+  foreach($arr_2 as $a){
     // ここで配列の中の1番大きい値を探したい
+    if ($max_number < $a){
+        $max_number = $a;
+    }
   }
-
   return $max_number;
 }
+$array_2 = [9,4,5,7,6,3];
+echo "【修正箇所】";
+echo "\n";
+echo "配列の最大値：";
+echo max_array($array_2);
+echo "\n";
+echo "\n";
 
 // 5.下記のビルトイン関数の用途、使い方を調べて実際に使ってみてください
 
@@ -87,7 +94,7 @@ $array2 = ["一","二","三"];
 $array3 = [10,20,30];
 
 $array4 = array_merge($array1,$array2,$array3);
-print_r($array4);//配列の中身がみたいの echo は使ってません
+print_r($array4);//配列の中身がみたい為、echo は使ってません
 echo "\n";
 
 // ・time 関数 = UNIXタイムスタンプ(UTCでの1970年1月1日からの経過時間)を取得

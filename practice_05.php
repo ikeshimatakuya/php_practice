@@ -3,17 +3,23 @@
 //１
 $name = "TakuyaIkeshima";
 if ($name == "TakuyaIkeshima"){
-    echo "私は あなたの名前 です";
+    $name .= " です";
+    echo "私は ";
+    echo $name;
 }else {
-    echo "あなたの名前ではありません";
+    $name .= " ではありません";
+    echo "私は ";
+    echo $name;
 }
 echo "\n";
 
+
 //２
+$sum_2;
 for($i = 1; $i <= 10000; $i++ ){
-    $i += $i;
+    $sum_2 += $i;
 }
-echo $i;
+echo $sum_2;
 echo "\n";
 
 //３
